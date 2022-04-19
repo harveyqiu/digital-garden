@@ -5,12 +5,6 @@ import { NextSeo } from "next-seo";
 
 export default function Header({ title, description, keywords, ogImage }) {
   return (
-    // <Head>
-    //   <meta {...ogImage} />
-    //   <title>{title}</title>
-    //   <meta name="description" content={description} />
-    //   <meta name="keywords" content={keywords} />
-    // </Head>
     <NextSeo
       title={title}
       description={description}
