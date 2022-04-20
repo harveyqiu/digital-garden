@@ -19,10 +19,12 @@ export default function About() {
           <section className="intro">
             <div>
               <SmallCaps>A Little Context</SmallCaps>
-              <p>Currently Law School Student</p>
-
-              <SmallCaps>A Little History</SmallCaps>
-              <p>History</p>
+              <p>平平无奇的法学院学生一枚，喜欢一些其他法学生不感兴趣的东西：比如科技、编程。</p>
+              <p>会写一点Python、HTML、JavaScript，但完全不懂网页设计。曾经在某家公司做Web全栈开发实习生。</p>
+              <p>曾经会使用Premiere和FinalCut剪辑视频，会使用AfterEffects套模板。</p>
+              <p>喜欢鼓弄各种新的App或服务，喜欢折腾自己。</p>
+              <p>看美剧、英剧和韩剧，但偶尔看国产综艺。同时喜欢后摇、摇滚和民谣，是个音痴。</p>
+              <p>mbti测出来过intp和istp。是天蝎座。</p>
             </div>
           </section>
           <Divider />
