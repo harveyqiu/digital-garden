@@ -212,7 +212,7 @@ export default function Index({
               </a>
             </Link>
             <Subheader>
-              Books I’ve read and books I like the idea of having read.
+              Books I’ve read.
             </Subheader>
             <div
               style={{
