@@ -3,13 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import Layout from "../components/Layout";
 import { Title2 } from "../components/Typography";
-import styled from "styled-components";
-import NoteCard from "../components/cards/NoteCard";
 import { DIARIES_PATH, diaryFilePaths } from "../utils/mdxUtils";
 import Header from "../components/Header";
 import TitleWithCount from "../components/TitleWithCount";
+import Calendar from "../components/unique/Calendar";
 
-export default function Diaries({ diaries }) {
+
+export default function Diaries({ diaries, updated_dates }) {
   return (
     <>
       <Header title="Diaries by Harvey Qiu" />
@@ -20,27 +20,11 @@ export default function Diaries({ diaries }) {
             Harvey's Personal Life Summary
           </Title2>
         </header>
-        <NotesGrid>
-          {diaries.map((note) => (
-            <NoteCard
-              id={note.slug}
-              slug={note.slug}
-              title={note.data.title}
-              growthStage={note.data.growthStage}
-              date={note.data.updated}
-              key={note.slug}
-            />
-          ))}
-        </NotesGrid>
+        <Calendar updateDates={updated_dates} />
       </Layout>
     </>
   );
 }
-
-const NotesGrid = styled.section`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-`;
 
 // Fetches the data for the page.
 
@@ -65,5 +49,9 @@ export function getStaticProps() {
   });
   diaries = sortedDiaries;
 
-  return { props: { diaries } };
+  const updated_dates = diaries.map((diary) => {
+    return diary.data.updated
+  })
+
+  return { props: { diaries, updated_dates } };
 }
