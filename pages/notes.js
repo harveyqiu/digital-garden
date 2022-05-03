@@ -29,6 +29,7 @@ export default function Notes({ notes }) {
               title={note.data.title}
               growthStage={note.data.growthStage}
               date={note.data.updated}
+              key={note.slug}
             />
           ))}
         </NotesGrid>
