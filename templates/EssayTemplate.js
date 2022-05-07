@@ -60,7 +60,7 @@ export default function EssayTemplate({
         {backlinks.length ? <Backlinks backlinks={backlinks} /> : null}
       </ProseWrapper>
       <TwitterReply
-        url={`https://maggieappleton.com/${slug}/`}
+        url={`https://garden.harveyqiu.xyz/${slug}/`}
         title={frontMatter.title}
       />
     </>
