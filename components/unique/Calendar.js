@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import dayjs from 'dayjs'
 import Link from 'next/link'
+import styled from "styled-components";
 
 export default function Calendar({updateDates}) {
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -74,6 +75,24 @@ export default function Calendar({updateDates}) {
                 <Placeholder />
                 <Day />
             </div>
+            <TipsEnglish>
+                Click the date to check my diaries posted on that date.  
+            </TipsEnglish>
+            <TipsChinese>
+                点击日期查看当天发布的「无意识日记」。
+            </TipsChinese>
         </div>
     )
 }
+
+
+const TipsEnglish = styled.div`
+    padding-top: 50px;
+    text-align: center;
+    font-family: "Canela Deck";
+`
+
+const TipsChinese = styled.div`
+    padding: 20px;
+    text-align: center;
+`
