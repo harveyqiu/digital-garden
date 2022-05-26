@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     justify-content: space-evenly;
-    font-family: "Canela Deck";
+    font-family: "LWXG Bright";
 }
 
 .action {
@@ -25,7 +25,7 @@
     height: 50px;
     display: inline-block;
     text-align: center;
-    font-family: "Canela Deck";
+    font-family: "LWXG Bright";
 }
 
 .calendar-main {
@@ -42,7 +42,7 @@
 }
 
 .day {
-    font-family: "Canela Deck";
+    font-family: "LWXG Bright";
     height: 60px;
     margin: auto;
     width: 60px;

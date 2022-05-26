@@ -89,7 +89,7 @@ export default function Calendar({updateDates}) {
 const TipsEnglish = styled.div`
     padding-top: 50px;
     text-align: center;
-    font-family: "Canela Deck";
+    font-family: "LXGW Bright";
 `
 
 const TipsChinese = styled.div`
