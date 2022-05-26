@@ -16,7 +16,6 @@ import { bookData } from "../posts/data/books";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-import UnderlineHoverLink from "../components/links/UnderlineHoverLink";
 import GrowthIcon from "../components/icons/GrowthIcon";
 import {
   essayFilePaths,
@@ -96,7 +95,7 @@ export default function Index({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Currently Law School Student
+            Currently Law School Student, Former Web Full-Stack Developer, Always Learner and Tech Hobbist
           </SmallTitle2>
         </header>
         <Spacer size="large" />
@@ -112,17 +111,14 @@ export default function Index({
                   fontSize: "var(--font-size-2xl)",
                 }}
               >
-                The Garden
+                The Garden{" "}
+                <ArrowRightIcon width="35" height="35" />
               </Title2>
             </a>
           </Link>
           <Subheader>
             A digital garden is a collection of imperfect notes, essays, and
             ideas growing slowly over time.{" "}
-            <ReadmoreLink href="/garden-history">
-              Learn more
-              <ArrowRightIcon width="18" height="18" />
-            </ReadmoreLink>
           </Subheader>
         </motion.section>
         <GardenSection

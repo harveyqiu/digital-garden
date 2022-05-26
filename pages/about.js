@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import styled from "styled-components";
 import { breakpoints } from "../utils/breakpoints";
 import { RelativeDate } from "../components/templates/Dates";
+import UnderlineHoverLink from "../components/links/UnderlineHoverLink";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -13,12 +15,11 @@ export default function About() {
         <HeaderSection>
           <SmallCaps>About</SmallCaps>
           <Title1>Harvey Qiu</Title1>
-          <Title2>Currently Law School Student, Tech hobbist</Title2>
         </HeaderSection>
         <StyledMain>
           <section className="intro">
             <div>
-              <SmallCaps>A Little Context</SmallCaps>
+              <SmallCaps>关于 Harvey</SmallCaps>
               <p>平平无奇的法学院学生一枚，喜欢一些其他法学生不感兴趣的东西：比如科技、编程。</p>
               <p>法律方面比较好奇数据法学以及竞争法学，但偶尔看下商法学。</p>
               <p>自学的编程，会写一点Python、HTML、JavaScript（但掌握程度并不高，平常主要靠copy & paste），但完全不懂网页设计。曾经在某家公司做Web全栈开发实习生。</p>
@@ -27,9 +28,10 @@ export default function About() {
               <p>看美剧、英剧和韩剧，但偶尔看国产综艺。同时喜欢后摇、摇滚和民谣，是个音痴。</p>
               <p>mbti测出来过intp和istp。是天蝎座。</p>
               <p>不想告诉你我的社交媒体。</p>
-              <p>新闻主要看路透社、财新、南方周末。</p>
+              <p>新闻主要看经济学人、财新、南方周末。</p>
               <p>我的政治坐标系是 <a href="https://www.idrlabs.com/cn/political-coordinates/1/13.9/1/19.4/result.php">13.9% 左派, 19.4% 自由主义者</a>。</p>
-              <p>你可以通过harveyqiu1110@outlook.com联系我。</p>
+              <p>你可以通过 harveyqiu1110@outlook.com 联系我。</p>
+              <p>关于这个网站，请查看<Link href="/colophon"><UnderlineHoverLink href="/colophon">这里</UnderlineHoverLink></Link>。</p>
             </div>
           </section>
           <Divider />
