@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 		/* Fonts */
-		--font-serif: 'LXGW Bright', serif;
+		--font-serif: 'EB Garamond', serif;
 		--font-body: 'LXGW Bright', serif;
 		--font-sans: 'Lato', sans-serif;
 
