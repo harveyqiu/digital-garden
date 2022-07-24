@@ -9,14 +9,9 @@ import generateRSSFeed from "../utils/generateRSSFeed";
 // Components
 import { Spacer } from "../components/Spacer";
 import { Title1, Title2, SmallTitle2 } from "../components/Typography";
-import EssayCard from "../components/cards/EssayCard";
-import ProjectCard from "../components/cards/ProjectCard";
-import BookCard from "../components/cards/BookCard";
-import { bookData } from "../posts/data/books";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-import GrowthIcon from "../components/icons/GrowthIcon";
 import {
   essayFilePaths,
   ESSAYS_PATH,
