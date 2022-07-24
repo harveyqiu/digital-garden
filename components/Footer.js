@@ -34,12 +34,8 @@ export default function Footer() {
             { text: "Notes", slug: "/notes" },
             { text: "Now", slug: "/now" },
             { text: "Diaries", slug: "/diaries" },
-            // { text: "Tools I Use", slug: "/uses" },
             { text: "Library", slug: "/library" },
-            // { text: "Changelog", slug: "/changelog" },
             { text: "Projects", slug: "/projects" },
-            { text: "Colophon", slug: "/colophon" },
-            // { text: "Illustration Resources", slug: "/resources" },
           ].map((link, i) => {
             return (
               <li key={i}>

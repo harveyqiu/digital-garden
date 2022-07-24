@@ -95,32 +95,10 @@ export default function Index({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Currently Law School Student, Former Web Full-Stack Developer, Always Learner and Tech Hobbist
+            Currently Law School Student,  Former Web Full-Stack Developer, Always Learner and Tech Hobbist
           </SmallTitle2>
         </header>
         <Spacer size="large" />
-        <motion.section
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.7, duration: 1 }}
-        >
-          <Link href="/garden">
-            <a href="/garden">
-              <Title2
-                style={{
-                  fontSize: "var(--font-size-2xl)",
-                }}
-              >
-                The Garden{" "}
-                <ArrowRightIcon width="35" height="35" />
-              </Title2>
-            </a>
-          </Link>
-          <Subheader>
-            A digital garden is a collection of imperfect notes, essays, and
-            ideas growing slowly over time.{" "}
-          </Subheader>
-        </motion.section>
         <GardenSection
           variants={collectionAnimation}
           initial="hidden"
@@ -136,28 +114,8 @@ export default function Index({
               </a>
             </Link>
             <Subheader>
-              Opinionated, longform narrative writing with an agenda
+              longform narrative writing
             </Subheader>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gridGap: "var(--space-2xs)",
-              }}
-            >
-              {essays.map((essay, i) => (
-                <EssayCard
-                  key={essay.slug}
-                  id={essay.slug}
-                  variants={itemAnimation}
-                  slug={essay.slug}
-                  cover={essay.data.cover}
-                  title={essay.data.title}
-                  growthStage={essay.data.growthStage}
-                  date={essay.data.updated}
-                />
-              ))}
-            </div>
           </section>
           <section style={{ gridArea: "notes" }}>
             <Link href="/notes">
@@ -169,21 +127,8 @@ export default function Index({
               </a>
             </Link>
             <Subheader>
-              Loose, unopinionated notes on things I don’t entirely understand
-              yet.
+              Loose notes on things I don’t entirely understand yet.
             </Subheader>
-            {notes.slice(0, 12).map((note) => (
-              <Link key={note.slug} href={`/${note.slug}`}>
-                <a>
-                  <IndexNoteCard>
-                    {note.data.growthStage && (
-                      <GrowthIcon growthStage={note.data.growthStage} />
-                    )}
-                    <h3>{note.data.title}</h3>
-                  </IndexNoteCard>
-                </a>
-              </Link>
-            ))}
           </section>
           <section style={{ gridArea: "diaries" }}>
             <Link href="/diaries">
@@ -210,60 +155,8 @@ export default function Index({
             <Subheader>
               Books I’ve read.
             </Subheader>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-                gridGap: "var(--space-2xs)",
-              }}
-            >
-              {bookData.slice(0, 8).map((book, i) => (
-                <BookCard
-                  small
-                  subtitle={book.subtitle}
-                  key={i}
-                  cover={book.cover}
-                  title={book.title}
-                  author={book.author}
-                  link={book.link}
-                />
-              ))}
-            </div>
           </section>
         </GardenSection>
-        <Spacer />
-        <section>
-          <Link href="/projects">
-            <a href="/projects">
-              <Title2
-                style={{
-                  fontSize: "var(--font-size-2xl)",
-                }}
-              >
-                Projects
-              </Title2>
-            </a>
-          </Link>
-          <Subheader>In the past I have made things</Subheader>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gridGap: "var(--space-s)",
-            }}
-          >
-            {projects.slice(0, 3).map((project, i) => (
-              <ProjectCard
-                key={i}
-                slug={project.slug}
-                title={project.data.title}
-                cover={project.data.cover}
-                date={project.data.updated}
-                topics={project.data.topics}
-              />
-            ))}
-          </div>
-        </section>
       </Layout>
     </>
   );
@@ -325,11 +218,11 @@ const GardenSection = styled(motion.section)`
   margin: var(--space-xl) 0 var(--space-s);
   display: grid;
   grid-gap: var(--space-xl);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "essays essays notes"
-    "diaries library library";
+    "essays notes"
+    "diaries library";
   @media ${breakpoints.mediaMD} {
     grid-gap: var(--space-s);
   }
