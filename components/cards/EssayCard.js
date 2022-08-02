@@ -18,17 +18,6 @@ export default function EssayCard({
     <Link key={id} as={`/${slug}`} href={`/${slug}`}>
       <a>
         <StyledEssayCard variants={variants}>
-          {cover && (
-            <div style={{ maxWidth: "450px", maxHeight: "450px" }}>
-              <Image
-                src={cover}
-                alt={title}
-                width={300}
-                height={300}
-                layout="responsive"
-              />
-            </div>
-          )}
           <h3>{title}</h3>
           <MetadataContainer>
             {growthStage && <span>{growthStage}</span>}

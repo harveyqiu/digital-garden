@@ -25,7 +25,6 @@ export default function Essays({ essays }) {
             <EssayCard
               id={essay.slug}
               slug={essay.slug}
-              cover={essay.data.cover}
               title={essay.data.title}
               growthStage={essay.data.growthStage}
               date={essay.data.updated}
