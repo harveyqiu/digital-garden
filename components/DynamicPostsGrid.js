@@ -13,7 +13,6 @@ export default function DynamicPostsGrid({ postsToShow }) {
                             <EssayCard
                                 key={i}
                                 slug={slug}
-                                cover={cover}
                                 title={title}
                                 growthStage={growthStage}
                                 date={updated}

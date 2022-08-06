@@ -11,8 +11,8 @@ function GardenPopoverLinks() {
   return (
     <Popover style={{ position: "relative" }}>
       <StyledPopoverButton>
-        <Link href="/garden">
-          <HoverLink href="/garden">
+        <Link href="/">
+          <HoverLink href="/">
             <span>The Garden</span>
           </HoverLink>
         </Link>

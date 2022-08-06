@@ -23,6 +23,7 @@ export default function Essays({ essays }) {
         <MasonryGrid>
           {essays.map((essay, i) => (
             <EssayCard
+              key={essay.slug}
               id={essay.slug}
               slug={essay.slug}
               title={essay.data.title}
