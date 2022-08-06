@@ -138,9 +138,6 @@ export const components = {
   NowSection: dynamic(() => import("../components/mdx/NowSection"), {
     ssr: false,
   }),
-  MysteriousVoid: dynamic(() => import("../components/unique/MysteriousVoid"), {
-    ssr: false,
-  }),
 };
 
 export default function PostPage({
