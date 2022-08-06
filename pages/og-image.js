@@ -133,7 +133,7 @@ const OgImage = () => {
             color: "var(--color-crimson)",
           }}
         >
-          maggieappleton.com
+          garden.harveyqiu.xyz
         </p>
         <Logo />
       </div>

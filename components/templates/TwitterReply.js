@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { breakpoints } from "../../utils/breakpoints";
 
 export const TwitterReply = ({ title, url }) => {
-    const twitterHandle = "mappletons";
+    const twitterHandle = "HarveyQ1u";
 
     return (
         <StyledTweetReply>
