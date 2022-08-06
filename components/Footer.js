@@ -27,7 +27,6 @@ export default function Footer() {
         </RSSFeed>
         <SitemapList>
           {[
-            { text: "The Garden", slug: "/garden" },
             // { text: "Start Here", slug: "/start" },
             { text: "Essays", slug: "/essays" },
             { text: "About", slug: "/about" },
