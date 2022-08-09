@@ -10,15 +10,11 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 
-export default function Now({ source }) {
+export default function Changelog({ source }) {
   return (
     <Layout>
       <HeaderContainer>
-        <Title1>Now</Title1>
-        <Title2>
-          A sporadically updated log of what I'm reading, exploring, and
-          thinking about
-        </Title2>
+        <Title1>Changelog</Title1>
       </HeaderContainer>
       <MainSection>
         <ProseWrapper>
@@ -50,7 +46,7 @@ const MainSection = styled.section`
 
 export const getStaticProps = async () => {
   //get the source code of the index.mdx file
-  const nowFilePath = path.join(process.cwd(), "pages", "now", "now.mdx");
+  const nowFilePath = path.join(process.cwd(), "pages", "changelog", "changelog.mdx");
   const source = fs.readFileSync(nowFilePath);
   const { content, data } = matter(source);
   const mdxSource = await serialize(content, {

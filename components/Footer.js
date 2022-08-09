@@ -31,7 +31,7 @@ export default function Footer() {
             { text: "Essays", slug: "/essays" },
             { text: "About", slug: "/about" },
             { text: "Notes", slug: "/notes" },
-            { text: "Now", slug: "/now" },
+            { text: "Changelog", slug: "/changelog" },
             { text: "Diaries", slug: "/diaries" },
             { text: "Library", slug: "/library" },
             { text: "Projects", slug: "/projects" },
