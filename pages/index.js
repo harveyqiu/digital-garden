@@ -6,6 +6,7 @@ import { breakpoints } from "../utils/breakpoints";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import generateRSSFeed from "../utils/generateRSSFeed";
+import generateDiaryRSSFeed from "../utils/generateDiaryRSSFeed";
 // Components
 import { Spacer } from "../components/Spacer";
 import { Title1, Title2, SmallTitle2 } from "../components/Typography";
@@ -342,10 +343,11 @@ export function getStaticProps() {
     return new Date(b.data.updated) - new Date(a.data.updated);
   });
 
-  const allPosts = [...essays, ...notes, ...projects, ...diaries];
+  const allPosts = [...essays, ...notes, ...projects];
 
   // Generate RSS Feed
   generateRSSFeed(allPosts);
+  generateDiaryRSSFeed(diaries)
 
   return {
     props: { sortedEssays, sortedNotes, sortedProjects},
