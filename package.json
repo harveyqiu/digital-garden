@@ -37,7 +37,6 @@
     "playwright-core": "^1.17.1",
     "postcss": "^8.4.16",
     "prism-react-renderer": "^1.2.1",
-    "prisma": "^4.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gsap": "^3.2.1",
