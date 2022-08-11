@@ -82,15 +82,14 @@ export default function Index({
               marginTop: "var(--space-m)",
             }}
           >
-            <b>Harvey </b>
-            writes posts about ups and downs, failures and mistakes.
+            Harvey writes posts about <br></br> ups and downs, failures and mistakes.
           </Title1>
           <SmallTitle2
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Currently Law School Student,  Former Web Full-Stack Developer, Always Learner and Tech Hobbist
+            Currently Law School Student, Always Learner and Tech Hobbist
           </SmallTitle2>
         </header>
         <Spacer size="large" />
@@ -135,7 +134,7 @@ export default function Index({
               </a>
             </Link>
             <Subheader>
-              My Diaries
+              Harvey's Personal Life Summary
             </Subheader>
           </section>
           <section style={{ gridArea: "library" }}>
