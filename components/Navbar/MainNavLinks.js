@@ -9,8 +9,8 @@ import { Popover } from "@headlessui/react";
 
 function GardenPopoverLinks() {
   return (
-    <Popover style={{ position: "relative" }}>
-      <StyledPopoverButton>
+    <Popover className="relative">
+      <Popover.Button className="p-0">
         <Link href="/">
           <HoverLink href="/">
             <span>The Garden</span>
@@ -18,7 +18,7 @@ function GardenPopoverLinks() {
         </Link>
 
         <StyledChevronDownIcon width="22" height="22" />
-      </StyledPopoverButton>
+      </Popover.Button>
 
       <Popover.Panel>
         <Dropdown
@@ -50,7 +50,7 @@ function GardenPopoverLinks() {
 
 export default function MainNavLinks() {
   return (
-    <Main>
+    <div className="flex flex-shrink-0 xs:hidden">
       <AnimatePresence>
         <GardenPopoverLinks />
       </AnimatePresence>
@@ -65,7 +65,7 @@ export default function MainNavLinks() {
           <UnderlineHoverLink href="/about">About</UnderlineHoverLink>
         </Link>
       </div>
-    </Main>
+    </div>
   );
 }
 
@@ -91,11 +91,8 @@ const StyledChevronDownIcon = styled(ChevronDownIcon)`
 `;
 
 const Main = styled.div`
-  display: flex;
-  flex-shrink: 0;
   a {
     margin-left: var(--space-s);
-    text-decoration: none;
     font-size: var(--font-size-xs);
     font-family: var(--font-sans);
     transition: color 0.2s ease-in-out;
@@ -108,9 +105,6 @@ const Main = styled.div`
       }
     }
   }
-  @media screen and (max-width: 550px) {
-    display: none;
-  } ;
 `;
 
 const DropdownLink = styled.a`
