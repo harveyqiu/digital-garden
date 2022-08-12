@@ -1,0 +1,48 @@
+.styled_down_icon {
+    display: inline;
+}
+
+.styled_down_icon svg {
+    @apply align-middle;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    transform 0.8s ease-in-out;
+    @apply ml-2;
+    @apply relative;
+    @apply top-0;
+}
+
+.styled_down_icon svg:hover {
+    @apply cursor-pointer;
+    @apply rounded;
+    background-color: var(--color-gray-100);
+    color: var(--color-bright-crimson);
+    transform: rotateY(180deg);
+}
+
+.main {
+    @apply flex;
+    @apply flex-shrink-0;
+}
+
+@media (max-width: 550px) {
+    .main {
+        @apply hidden;
+    }
+}
+
+.main a {
+    margin-left: var(--space-s);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-sans);
+    transition: color 0.2s ease-in-out;
+}
+
+
+
+.main a span {
+    color: var(--color-gray-800);
+}
+
+.main a:hover span {
+    color: var(--color-crimson);
+}

@@ -6,18 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import UnderlineHoverLink from "../links/UnderlineHoverLink";
 import { Popover } from "@headlessui/react";
+import styles from './MainNavLink.module.css'
 
 function GardenPopoverLinks() {
   return (
     <Popover className="relative">
-      <Popover.Button className="p-0">
-        <Link href="/">
-          <HoverLink href="/">
-            <span>The Garden</span>
-          </HoverLink>
-        </Link>
-
-        <StyledChevronDownIcon width="22" height="22" />
+      <Popover.Button className="p-0 outline-0">
+        <span>The Garden</span>
+        <div className={styles.styled_down_icon}>
+          <ChevronDownIcon width="22" height="22" />
+        </div>
       </Popover.Button>
 
       <Popover.Panel>
@@ -50,7 +48,7 @@ function GardenPopoverLinks() {
 
 export default function MainNavLinks() {
   return (
-    <div className="flex flex-shrink-0 xs:hidden">
+    <div className={styles.main}>
       <AnimatePresence>
         <GardenPopoverLinks />
       </AnimatePresence>
@@ -68,44 +66,6 @@ export default function MainNavLinks() {
     </div>
   );
 }
-
-const StyledPopoverButton = styled(Popover.Button)`
-  padding: 0;
-`;
-
-const StyledChevronDownIcon = styled(ChevronDownIcon)`
-  vertical-align: middle;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    transform 0.8s ease-in-out;
-  color: var(--color-gray-600);
-  margin-left: var(--space-3xs);
-  position: relative;
-  top: 0;
-  &:hover {
-    color: var(--color-bright-crimson);
-    transform: rotateY(180deg);
-    cursor: pointer;
-    background-color: var(--color-gray-100);
-    border-radius: 4px;
-  }
-`;
-
-const Main = styled.div`
-  a {
-    margin-left: var(--space-s);
-    font-size: var(--font-size-xs);
-    font-family: var(--font-sans);
-    transition: color 0.2s ease-in-out;
-    span {
-      color: var(--color-gray-800);
-    }
-    :hover {
-      span {
-        color: var(--color-crimson);
-      }
-    }
-  }
-`;
 
 const DropdownLink = styled.a`
   margin: 0 !important;
