@@ -83,7 +83,7 @@ export default function Index({
               marginTop: "var(--space-m)",
             }}
           >
-            Harvey writes posts about <br></br> ups and downs, failures and mistakes.
+            Harvey writes posts about <br></br> failures and mistakes,<br></br>ups and downs.
           </Title1>
           <SmallTitle2
             initial={{ opacity: 0, x: -50 }}
