@@ -1,5 +1,6 @@
 /* fonts go here */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 @font-face {
     font-family: "LXGW Bright";
@@ -36,4 +37,9 @@
 svg {
     display: inline;
     vertical-align: baseline;
+}
+
+.footer {
+    justify-content: space-around;
+    @apply flex container mx-auto px-8 border-solid border-t-2 border-gray-100;
 }

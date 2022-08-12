@@ -1,16 +1,13 @@
-import { GlobalStyle } from "../components/GlobalStyle";
-// import { AnimatePresence } from "framer-motion";
 import "./_app.css";
 import { DefaultSeo } from "next-seo";
-import Navbar from "../components/Navbar/index.js";
-import Footer from "../components/Footer";
+import Navbar from "../componentsv2/Navbar/index.js";
+import Footer from "../componentsv2/Footer";
 
 function MyApp({ Component, pageProps, router }) {
   // Don't include navbar and footer when generating open graph images
   if (router.pathname === "/og-image") {
     return (
       <>
-        <GlobalStyle />
         <Component {...pageProps} />
       </>
     );
@@ -18,7 +15,6 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      <GlobalStyle />
       <container>
         <DefaultSeo
           title="Harvey Qiu's digital garden"
