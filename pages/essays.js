@@ -17,13 +17,13 @@ export default function Essays({ essays }) {
         <header style={{ marginBottom: "var(--space-xl)" }}>
           <TitleWithCount posts={essays}>Essays</TitleWithCount>
           <Title2>
-            Opinionated, longform narrative writing with an agenda.
+            Longform, narrative writing with an agenda.
           </Title2>
         </header>
         <MasonryGrid>
           {essays.map((essay, i) => (
             <EssayCard
-              key={essay.slug}
+              key={i}
               id={essay.slug}
               slug={essay.slug}
               title={essay.data.title}
